@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mafia</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/8eac375992.js"
+      crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header_container">
+        <div class="menu">
+          <img src="mafia foto.jpg" alt="mafia" onclick="fullResetFoto()" />
+          <span><a href="index3.html" id="bigSigma">Правила</a></span>
+          <span><a href="#" onclick="assignRandomRolesA()">Роли</a></span>
+        </div>
+        <i class="fa-solid fa-palette" id="icon"></i>
+        <div class="color-switcher" id="sigma">
+          <label for="color">Color Switcher</label>
+          <input type="color" id="color" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="nights">
+          <div class="night">
+            <div class="span">
+              <span>4</span>
+            </div>
+            <input type="text" />
+            <a href="index2.html"
+              ><i
+                class="fa-solid fa-scale-balanced"
+                onclick="goToCourtPage(event)"></i
+            ></a>
+          </div>
+          <div class="night">
+            <div class="span">
+              <span>3</span>
+            </div>
+            <input type="text" />
+            <a href="index2.html"
+              ><i
+                class="fa-solid fa-scale-balanced"
+                onclick="goToCourtPage(event)"></i
+            ></a>
+          </div>
+          <div class="night">
+            <div class="span">
+              <span>2</span>
+            </div>
+            <input type="text" />
+            <a href="index2.html"
+              ><i
+                class="fa-solid fa-scale-balanced"
+                onclick="goToCourtPage(event)"></i
+            ></a>
+          </div>
+          <div class="night">
+            <div class="span">
+              <span>1</span>
+            </div>
+            <input type="text" />
+            <a href="index2.html"
+              ><i
+                class="fa-solid fa-scale-balanced"
+                onclick="goToCourtPage(event)"></i
+            ></a>
+          </div>
+          <div class="night">
+            <div class="span">
+              <span>0</span>
+            </div>
+            <input type="text" />
+            <a href="index2.html"
+              ><i
+                class="fa-solid fa-scale-balanced"
+                onclick="goToCourtPage(event)"></i
+            ></a>
+          </div>
+        </div>
+        <div class="players">
+          <div class="player">
+            <button class="btn"></button>
+            <div class="drop-down-menu">
+              <a href="#" onclick="Mafia()">Мафия</a>
+              <a href="#" onclick="Mirni()">Мирный</a>
+              <a href="#" onclick="Don()">Дон</a>
+              <a href="#" onclick="Sherif()">Шериф</a>
+              <i class="fa-solid fa-xmark" onclick="Delete()"></i>
+            </div>
+            <span>1</span><input type="text" class="input1" /><input
+              type="text"
+              class="input2"
+              id="input1" />
+            <i class="fa-solid fa-gun" onclick="Shoot()"></i>
+          </div>
+          <div class="player">
+            <button class="btn"></button>
+            <div class="drop-down-menu">
+              <a href="#" onclick="Mafia()">Мафия</a>
+              <a href="#" onclick="Mirni()">Мирный</a>
+              <a href="#" onclick="Don()">Дон</a>
+              <a href="#" onclick="Sherif()">Шериф</a>
+              <i class="fa-solid fa-xmark" onclick="Delete()"></i>
+            </div>
+            <span>2</span><input type="text" class="input1" /><input
+              type="text"
+              class="input2"
+              id="input2" />
+            <i class="fa-solid fa-gun" onclick="Shoot()"></i>
+          </div>
+          <div class="player">
+            <button class="btn"></button>
+            <div class="drop-down-menu">
+              <a href="#" onclick="Mafia()">Мафия</a>
+              <a href="#" onclick="Mirni()">Мирный</a>
+              <a href="#" onclick="Don()">Дон</a>
+              <a href="#" onclick="Sherif()">Шериф</a>
+              <i class="fa-solid fa-xmark" onclick="Delete()"></i>
+            </div>
+            <span>3</span><input type="text" class="input1" /><input
+              type="text"
+              class="input2"
+              id="input3" />
+            <i class="fa-solid fa-gun" onclick="Shoot()"></i>
+          </div>
+          <div class="player">
+            <button class="btn"></button>
+            <div class="drop-down-menu">
+              <a href="#" onclick="Mafia()">Мафия</a>
+              <a href="#" onclick="Mirni()">Мирный</a>
+              <a href="#" onclick="Don()">Дон</a>
+              <a href="#" onclick="Sherif()">Шериф</a>
+              <i class="fa-solid fa-xmark" onclick="Delete()"></i>
+            </div>
+            <span>4</span><input type="text" class="input1" /><input
+              type="text"
+              class="input2"
+              id="input4" />
+            <i class="fa-solid fa-gun" onclick="Shoot()"></i>
+          </div>
+          <div class="player">
+            <button class="btn"></button>
+            <div class="drop-down-menu">
+              <a href="#" onclick="Mafia()">Мафия</a>
+              <a href="#" onclick="Mirni()">Мирный</a>
+              <a href="#" onclick="Don()">Дон</a>
+              <a href="#" onclick="Sherif()">Шериф</a>
+              <i class="fa-solid fa-xmark" onclick="Delete()"></i>
+            </div>
+            <span>5</span><input type="text" class="input1" /><input
+              type="text"
+              class="input2"
+              id="input5" />
+            <i class="fa-solid fa-gun" onclick="Shoot()"></i>
+          </div>
+          <div class="player">
+            <button class="btn"></button>
+            <div class="drop-down-menu">
+              <a href="#" onclick="Mafia()">Мафия</a>
+              <a href="#" onclick="Mirni()">Мирный</a>
+              <a href="#" onclick="Don()">Дон</a>
+              <a href="#" onclick="Sherif()">Шериф</a>
+              <i class="fa-solid fa-xmark" onclick="Delete()"></i>
+            </div>
+            <span>6</span><input type="text" class="input1" /><input
+              type="text"
+              class="input2"
+              id="input6" />
+            <i class="fa-solid fa-gun" onclick="Shoot()"></i>
+          </div>
+          <div class="player">
+            <button class="btn"></button>
+            <div class="drop-down-menu">
+              <a href="#" onclick="Mafia()">Мафия</a>
+              <a href="#" onclick="Mirni()">Мирный</a>
+              <a href="#" onclick="Don()">Дон</a>
+              <a href="#" onclick="Sherif()">Шериф</a>
+              <i class="fa-solid fa-xmark" onclick="Delete()"></i>
+            </div>
+            <span>7</span><input type="text" class="input1" /><input
+              type="text"
+              class="input2"
+              id="input7" />
+            <i class="fa-solid fa-gun" onclick="Shoot()"></i>
+          </div>
+          <div class="player">
+            <button class="btn"></button>
+            <div class="drop-down-menu">
+              <a href="#" onclick="Mafia()">Мафия</a>
+              <a href="#" onclick="Mirni()">Мирный</a>
+              <a href="#" onclick="Don()">Дон</a>
+              <a href="#" onclick="Sherif()">Шериф</a>
+              <i class="fa-solid fa-xmark" onclick="Delete()"></i>
+            </div>
+            <span>8</span><input type="text" class="input1" /><input
+              type="text"
+              class="input2"
+              id="input8" />
+            <i class="fa-solid fa-gun" onclick="Shoot()"></i>
+          </div>
+          <div class="player">
+            <button class="btn"></button>
+            <div class="drop-down-menu">
+              <a href="#" onclick="Mafia()">Мафия</a>
+              <a href="#" onclick="Mirni()">Мирный</a>
+              <a href="#" onclick="Don()">Дон</a>
+              <a href="#" onclick="Sherif()">Шериф</a>
+              <i class="fa-solid fa-xmark" onclick="Delete()"></i>
+            </div>
+            <span>9</span><input type="text" class="input1" /><input
+              type="text"
+              class="input2"
+              id="input9" />
+            <i class="fa-solid fa-gun" onclick="Shoot()"></i>
+          </div>
+          <div class="player">
+            <button class="btn"></button>
+            <div class="drop-down-menu">
+              <a href="#" onclick="Mafia()">Мафия</a>
+              <a href="#" onclick="Mirni()">Мирный</a>
+              <a href="#" onclick="Don()">Дон</a>
+              <a href="#" onclick="Sherif()">Шериф</a>
+              <i class="fa-solid fa-xmark" onclick="Delete()"></i>
+            </div>
+            <span>10</span>
+            <input type="text" class="input1" /><input
+              type="text"
+              class="input2"
+              id="input10" />
+            <i class="fa-solid fa-gun" onclick="Shoot()"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

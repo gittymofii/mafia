@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bg-col);
+  position: relative;
+}
+:root {
+  --main-red-color: color-mix(in srgb, var(--bg-col) 50%, black);
+  --bg-col: rgb(34, 34, 34);
+  --text-color: rgb(246, 246, 246);
+}
+i {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  color: var(--text-color);
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  transform: scaleX(-1);
+  cursor: pointer;
+}
+.nights-container {
+  display: flex;
+  justify-content: start;
+  width: 393px;
+}
+.player-vote {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  width: 380px;
+  height: 100px;
+  margin: 10px 0 0 10px;
+  align-items: center;
+}
+.player-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player-number p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  width: 70px;
+  height: 70px;
+  border: 3px var(--text-color) solid;
+  border-radius: 50%;
+  color: var(--text-color);
+}
+.player-vote input {
+  height: 35px;
+  background-color: transparent;
+  border: 3px var(--text-color) solid;
+  border-radius: 5px;
+  outline: none;
+  padding: 15px;
+  font-size: 20px;
+  word-spacing: 10px;
+  color: var(--text-color);
+}
+.player-vote input::placeholder {
+  color: var(--text-color);
+}
+h1 {
+  color: var(--bg-col);
+  margin: 20px 0 -10px 110px;
+  font-size: 80px;
+  text-shadow: 0 0 40px var(--text-color);
+}

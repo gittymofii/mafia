@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: var(--bg-col);
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  overflow: hidden;
+}
+:root {
+  --bg-col: rgb(34, 34, 34);
+  --main-red-color: color-mix(in srgb, var(--bg-col) 50%, black);
+  --text-color: rgb(246, 246, 246);
+}
+.header_container {
+  position: relative;
+  display: flex;
+  height: 70px;
+  width: 100%;
+  background-color: var(--main-red-color);
+}
+.menu {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  color: var(--text-color);
+  align-items: center;
+  gap: 20px;
+}
+.menu img {
+  width: 60px;
+  height: auto;
+  margin: 0 20px;
+  border: var(--text-color) solid 2.5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.menu span {
+  margin: 0 10px 0 0;
+  font-size: 20px;
+}
+.menu a {
+  text-decoration: none;
+  color: var(--text-color);
+  position: relative;
+}
+.menu a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--text-color);
+  transition: width ease-in-out 0.5s;
+}
+.menu a:hover::before {
+  width: 100%;
+}
+main {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  width: 100vw;
+}
+.container {
+  display: grid;
+  grid-template-rows: 40% 60%;
+  height: 710px;
+  background-color: var(--bg-col);
+  width: 100%;
+}
+.nights {
+  margin-top: 22px;
+  position: relative;
+  border-top: 2px var(--text-color) solid;
+  flex-wrap: nowrap;
+}
+.night {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: var(--text-color) 2px solid;
+  flex-wrap: nowrap;
+}
+.nights::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Голосование";
+  position: absolute;
+  top: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 18px;
+  color: var(--text-color);
+  background-color: var(--main-red-color);
+  font-size: 14px;
+  border-radius: 8px 8px 0 0;
+  /* z-index: 10; */
+}
+.night input {
+  height: 50.5px;
+  border: none;
+  border-left: var(--text-color) 2px solid;
+  width: 80%;
+  font-size: 20px;
+  outline: none;
+  padding-left: 10px;
+  background-color: var(--bg-col);
+  word-spacing: 30px;
+  color: var(--text-color);
+}
+.night .span {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.night span {
+  font-size: 20px;
+  color: var(--text-color);
+}
+.night i {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  padding: 8px;
+  border-radius: 50%;
+  border: 2px var(--text-color) solid;
+  cursor: pointer;
+  color: var(--text-color);
+}
+.night i:hover {
+  color: rgb(59, 59, 59);
+  background-color: rgba(255, 240, 109, 0.92);
+  border: 2px rgba(255, 236, 70, 0.92) solid;
+  transition: ease-in-out 0.2s;
+}
+.players {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-top: 2px var(--text-color) solid;
+  margin-top: 22px;
+}
+.players::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Ники";
+  position: absolute;
+  top: -19.5px;
+  left: 98px;
+  width: 55px;
+  height: 18px;
+  color: var(--text-color);
+  background-color: var(--main-red-color);
+  font-size: 14px;
+  border-radius: 8px 8px 0 0;
+  /* z-index: 10; */
+}
+.players::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Фолы";
+  position: absolute;
+  top: -19.5px;
+  left: 220px;
+  width: 95px;
+  height: 18px;
+  color: var(--text-color);
+  background-color: var(--main-red-color);
+  font-size: 14px;
+  border-radius: 8px 8px 0 0;
+  /* z-index: 10; */
+}
+.player {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 42px;
+  border-bottom: 2px var(--text-color) solid;
+}
+.player input {
+  position: relative;
+  height: 40px;
+  padding-left: 15px;
+  outline: none;
+  border: none;
+  border-left: 2px var(--text-color) solid;
+  font-size: 15px;
+  background-color: var(--bg-col);
+  color: var(--text-color);
+}
+.player span {
+  margin: 0 10px 0 20px;
+  width: 14px;
+  color: var(--text-color);
+}
+.player .input2 {
+  width: 200px;
+  font-size: 20px;
+}
+.player .input1 {
+  position: relative;
+  width: 70px;
+  padding-right: 5px;
+  font-size: 15px;
+}
+.player i {
+  cursor: pointer;
+  position: absolute;
+  top: 7px;
+  right: 14px;
+  transform: scaleX(-1);
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px var(--text-color) solid;
+  color: var(--text-color);
+}
+
+.player::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 122.5px;
+  height: 50px;
+  width: 5px;
+  border-radius: 2px;
+  background-color: rgb(255, 40, 40);
+  z-index: 1;
+  transform: rotate(50deg);
+  opacity: 0;
+}
+.player::after {
+  content: "";
+  border-radius: 2px;
+  position: absolute;
+  top: -3px;
+  left: 122.5px;
+  height: 50px;
+  width: 5px;
+  background-color: rgb(255, 40, 40);
+  z-index: 10;
+  transform: rotate(130deg);
+  opacity: 0;
+  transition: opacity ease-in-out 0.5s;
+}
+.player.show-lines::before,
+.player.show-lines::after {
+  opacity: 1;
+}
+.player button {
+  position: relative;
+  width: 40px;
+  padding: 10px;
+  height: 20px;
+  margin: 0 0 0 5px;
+  background-color: var(--bg-col);
+  border: 1.5px var(--text-color) solid;
+  border-radius: 1.5px;
+  cursor: pointer;
+  z-index: 0;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.player .drop-down-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60px;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  left: 5px;
+  background-color: var(--text-color);
+  width: 40px;
+  z-index: 1;
+  display: none;
+  border-radius: 0 0 5px 5px;
+}
+.player .drop-down-menu a {
+  font-size: 10px;
+  text-decoration: none;
+  color: var(--bg-col);
+  width: 40px;
+}
+.drop-down-menu a:hover {
+  background-color: rgb(199, 199, 199);
+}
+.player button:hover + .drop-down-menu,
+.player .drop-down-menu:hover {
+  display: flex;
+}
+.player i:hover {
+  color: rgb(238, 238, 238);
+  background-color: rgb(206, 45, 45);
+  border: 2px rgb(248, 53, 53) solid;
+  transition: ease-in-out 0.2s;
+}
+.drop-down-menu i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 48px;
+  right: auto;
+  left: auto;
+  font-size: 9px;
+  padding: 0;
+  border: 2px var(--bg-col) solid;
+  height: 10px;
+  color: var(--text-color);
+  background-color: var(--bg-col);
+}
+.drop-down-menu i:hover {
+  color: var(--text-color);
+  background-color: var(--main-red-color);
+  border: 2px var(--bg-col) solid;
+  transition: ease-in-out 0.5s;
+}
+.color-switcher {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 12vh;
+  right: 4vw;
+  width: 180px;
+  height: 90px;
+  border-radius: 8px;
+  box-shadow: -13px 13px 37px var(--main-red-color);
+  background-color: var(--bg-col);
+  z-index: 2;
+}
+#icon {
+  cursor: pointer;
+  position: absolute;
+  right: 4vw;
+  top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--main-red-color);
+  padding: 0.8rem;
+  border-radius: 7px;
+  background-color: var(--text-color);
+  transition: ease-in-out 0.2s;
+}
+#icon:hover {
+  transform: scale(0.9);
+}
+#color {
+  margin-top: 8px;
+  width: 95%;
+  height: 40px;
+  z-index: 0;
+  border: 1px solid var(--text-color);
+  outline: none;
+  border-radius: 5px;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+}
+.color-switcher.opacity {
+  display: flex;
+}
+.color-switcher label {
+  margin-top: 15px;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 400;
+}
